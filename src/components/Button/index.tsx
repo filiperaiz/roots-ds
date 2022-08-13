@@ -1,8 +1,20 @@
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 
-import { SpacingProps } from 'types/generics'
-
 import * as S from './styles'
+
+type SpacingProps =
+  | ''
+  | 'min'
+  | 'nano'
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxl'
 
 type ButtonTypes =
   | AnchorHTMLAttributes<HTMLAnchorElement>

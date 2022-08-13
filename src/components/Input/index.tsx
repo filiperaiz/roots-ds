@@ -2,11 +2,24 @@
 import React, { InputHTMLAttributes, useEffect, useState } from 'react'
 import { MdVisibility, MdVisibilityOff } from 'react-icons/md'
 
-import { SpacingProps } from 'types/generics'
 import formatCurrency from 'utils/formatCurrency'
 import MasksInput from 'utils/masks'
 
 import * as S from './styles'
+
+type SpacingProps =
+  | ''
+  | 'min'
+  | 'nano'
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxl'
 
 type MaskProps = {
   mask: string

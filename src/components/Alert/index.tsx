@@ -2,9 +2,21 @@ import React from 'react'
 import { MdInfo } from 'react-icons/md'
 import { RiCloseFill } from 'react-icons/ri'
 
-import { SpacingProps } from 'types/generics'
-
 import * as S from './styles'
+
+type SpacingProps =
+  | ''
+  | 'min'
+  | 'nano'
+  | 'xxxs'
+  | 'xxs'
+  | 'xs'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | 'xxl'
+  | 'xxl'
 
 export type AlertProps = {
   children: React.ReactNode
