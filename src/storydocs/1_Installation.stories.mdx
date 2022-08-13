@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Documentação/Instalação" />
+
+# Instalação
+
+Primeiro você precisa instalá-lo usando NPM ou Yarn.
+
+#### Usando Yarn
+
+```sh
+$ yarn add @roots/design-system
+```
+
+#### Usando NPM
+
+```sh
+$ npm i @roots/design-system
+```
+
+
+### Examplo base
+
+```jsx
+import React from 'react';
+
+import { ThemeProvider } from 'styled-components';
+import { theme } from '@roots/design-system';
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+       {/* seu código aqui */}
+    </ThemeProvider>
+  );
+}
+
+export default App;
+```
+
+
+

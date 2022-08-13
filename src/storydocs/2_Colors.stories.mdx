@@ -1,0 +1,51 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs'
+import theme from '../styles/theme'
+
+<Meta title="Documentação/Colors" />
+
+# Colors
+
+All color palettes.
+
+<ColorPalette>
+  <ColorItem
+    title="Cor Primária"
+    colors={{ 100: theme.colors.primary[100], 400: theme.colors.primary[400], 700: theme.colors.primary[700] }}
+  />
+  <ColorItem
+    title="Cor Secundária"
+    colors={{ 100: theme.colors.secondary[100], 400: theme.colors.secondary[400], 700: theme.colors.secondary[700] }}
+  />
+  <ColorItem
+    title="Cor Sucesso"
+    colors={{ 100: theme.colors.success[100], 400: theme.colors.success[400], 700: theme.colors.success[700] }}
+  />
+  <ColorItem
+    title="Cor Warning"
+    colors={{ 100: theme.colors.warning[100], 400: theme.colors.warning[400], 700: theme.colors.warning[700] }}
+  />
+  <ColorItem
+    title="Cor Error"
+    colors={{ 100: theme.colors.error[100], 400: theme.colors.error[400], 700: theme.colors.error[700] }}
+  />
+  <ColorItem
+    title="Cor Info"
+    colors={{ 100: theme.colors.info[100], 400: theme.colors.info[400], 700: theme.colors.info[700] }}
+  />
+  <ColorItem
+    title="Cor Light"
+    colors={{ 100: theme.colors.light[100], 400: theme.colors.light[400], 700: theme.colors.light[700] }}
+  />
+  <ColorItem
+    title="Cor Dark"
+    colors={{ 100: theme.colors.dark[100], 400: theme.colors.dark[400], 700: theme.colors.dark[700] }}
+  /> 
+  <ColorItem
+    title="Cor Branco"
+    colors={[theme.colors.white]}
+  />
+  <ColorItem
+    title="Cor Preto"
+    colors={[theme.colors.black]}
+  />
+</ColorPalette>

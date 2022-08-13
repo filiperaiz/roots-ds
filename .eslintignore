@@ -1,0 +1,5 @@
+!.stoybook
+!.jest
+dist
+public
+build

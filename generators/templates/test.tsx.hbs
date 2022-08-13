@@ -1,0 +1,17 @@
+import React from 'react'
+
+import { render, screen } from 'utils/test-utils'
+
+import {{pascalCase name}} from '.'
+
+describe('<{{pascalCase name}} />', () => {
+  it('should render Component', () => {
+    render(<{{pascalCase name}} data-id="action_test" />)
+  })
+
+  it('should render the heading', () => {
+    render(<{{pascalCase name}} data-id="action_test" />)
+
+    expect(screen.getByRole('heading', { name: /{{pascalCase name}}/i })).toBeInTheDocument()
+  })
+})

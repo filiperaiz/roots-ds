@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/addon-docs'
+
+<Meta title="Helpers/Media Queries" />
+
+# Media Queries
+
+```jsx
+import { media } from '@roots/design-system'
+```
+
+| Variable               | Value                   |
+| ---------------------- | ----------------------- |
+| small                  | 576px  (Mobile)         |
+| medium                 | 768px  (Tablet)         |
+| large                  | 992px  (Desktop)        |
+| xlarge                 | 1200px (Large Desktop)  |
+| xxlarge                | 1400px (Larger Desktop) |
+
+## Uso
+```js
+  ${media.lessThan('small')`
+   ...code
+ `}
+
+  ${media.greaterThan('small')`
+   ...code
+ `}
+```
+
+## Exemplo base com media queries
+
+``` css
+import styled from 'styled-components';
+
+import { media } from '@roots/design-system';
+
+export const Wrapper = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    background-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
+
+    ${media.lessThan('small')`
+      width: 100%;
+    `}
+  `}
+`;
