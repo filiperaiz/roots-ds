@@ -11,7 +11,7 @@ export const Wrapper = styled.div<WrapperProps>`
     box-shadow: ${theme.shadow.sm};
     margin-bottom: ${mb ? theme.spacing[mb] : 0};
     margin-top: ${mt ? theme.spacing[mt] : 0};
-    padding: ${theme.spacing.md};
+    padding: ${theme.spacing.xxxs};
     position: relative;
     width: 100%;
   `}

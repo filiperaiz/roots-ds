@@ -21,5 +21,5 @@ const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />
 export const Default = Template.bind({})
 
 Default.args = {
-  children: 'Lorem ipsum dolor sit. kjhkj '
+  children: 'Roots Design System '
 }
