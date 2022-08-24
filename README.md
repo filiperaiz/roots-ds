@@ -46,7 +46,7 @@ npm link
 
 - In the project that consumes this package we will run the command
 ``` sh
-npm link @roots/design-system
+npm link roots-design-system
 ```
 
 

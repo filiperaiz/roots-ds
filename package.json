@@ -1,6 +1,7 @@
 {
-  "name": "@roots/design-system",
-  "version": "0.1.0",
+  "name": "roots-design-system",
+  "version": "0.1.1",
+  "private": false,
   "keywords": [],
   "author": "Filipe Raiz",
   "description": "Design System React, Styled Component and Storybook.",
