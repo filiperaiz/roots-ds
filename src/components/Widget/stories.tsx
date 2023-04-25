@@ -1,10 +1,8 @@
-import React from 'react'
-
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Widget from '.'
 
-export default {
+const meta: Meta<typeof Widget> = {
   title: 'Components/Widget',
   component: Widget,
   argTypes: {
@@ -12,18 +10,18 @@ export default {
       type: 'string'
     }
   },
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Widget>
+}
 
-const Template: ComponentStory<typeof Widget> = (args) => <Widget {...args} />
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Widget>
 
-Default.args = {
-  children: 'Widget'
+export const Default: Story = {
+  args: {
+    children: 'Widget'
+  }
 }

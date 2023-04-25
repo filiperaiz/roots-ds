@@ -1,10 +1,8 @@
-import React from 'react'
-
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Checkbox from '.'
 
-export default {
+const meta: Meta<typeof Checkbox> = {
   title: 'Components/Checkbox',
   component: Checkbox,
   argTypes: {
@@ -13,34 +11,33 @@ export default {
     }
   },
   args: {
-    'data-id': 'action_test',
     children: 'Checkbox'
   },
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Checkbox>
-
-const Template: ComponentStory<typeof Checkbox> = (args) => (
-  <Checkbox {...args} />
-)
-
-export const Default = Template.bind({})
-
-Default.args = {
-  id: 'checkbox-1'
 }
 
-export const Disabled = Template.bind({})
+export default meta
 
-Disabled.args = {
-  id: 'checkbox-2',
-  disabled: true
+type Story = StoryObj<typeof Checkbox>
+
+export const Default: Story = {
+  args: {
+    id: 'checkbox-1'
+  }
 }
 
-export const Error = Template.bind({})
+export const Disabled: Story = {
+  args: {
+    id: 'checkbox-2',
+    disabled: true
+  }
+}
 
-Error.args = {
-  id: 'checkbox-3',
-  error: true
+export const Error: Story = {
+  args: {
+    id: 'checkbox-3',
+    error: true
+  }
 }

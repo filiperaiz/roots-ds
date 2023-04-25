@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Select from '.'
 
-export default {
+const meta: Meta<typeof Select> = {
   title: 'Components/Select',
   component: Select,
   argTypes: {
@@ -12,62 +12,68 @@ export default {
       type: 'string'
     }
   },
-  args: {
-    'data-id': 'action_test',
-    options: [
-      {
-        label: '',
-        value: ''
-      },
-      {
-        label: 'Option 1',
-        value: 'valueOption1'
-      },
-      {
-        label: 'Option 2',
-        value: 'valueOption2'
-      },
-      {
-        label: 'Option 3',
-        value: 'valueOption3'
-      }
-    ]
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Select>
+}
 
-const TemplateDefault: ComponentStory<typeof Select> = (args) => {
+export default meta
+
+type Story = StoryObj<typeof Select>
+
+const Component = (args: Story) => {
+  const options = [
+    {
+      label: '',
+      value: ''
+    },
+    {
+      label: 'Option 1',
+      value: 'valueOption1'
+    },
+    {
+      label: 'Option 2',
+      value: 'valueOption2'
+    },
+    {
+      label: 'Option 3',
+      value: 'valueOption3'
+    }
+  ]
+
   const [value, setValue] = useState('valueOption1')
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>
     setValue(event.target.value)
 
-  return <Select {...args} onChange={handleChange} value={value} />
+  return (
+    <Select
+      id="select"
+      label="Nome do campo"
+      options={options}
+      {...args}
+      onChange={handleChange}
+      value={value}
+    />
+  )
 }
 
-export const Default = TemplateDefault.bind({})
-
-Default.args = {
-  label: 'Ocupação',
-  name: 'Select'
+export const Default: Story = {
+  render: (args) => <Component {...args} />,
+  args: {}
 }
 
-const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />
-
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-  label: 'Ocupação',
-  id: 'select',
-  disabled: true
+export const Disabled: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    disabled: true
+  }
 }
 
-export const Error = Template.bind({})
-
-Error.args = {
-  label: 'Ocupação',
-  id: 'select',
-  errorMessage: 'O campo é obrigatório'
+export const Error: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    errorMessage: 'O campo é obrigatório'
+  }
 }

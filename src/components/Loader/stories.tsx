@@ -1,10 +1,8 @@
-import React from 'react'
-
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Loader from '.'
 
-export default {
+const meta: Meta<typeof Loader> = {
   title: 'Components/Loader',
   component: Loader,
   argTypes: {
@@ -18,10 +16,12 @@ export default {
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Loader>
+}
 
-const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Loader>
 
-Default.args = {}
+export const Default: Story = {
+  args: {}
+}

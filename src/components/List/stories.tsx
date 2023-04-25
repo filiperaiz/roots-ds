@@ -1,43 +1,44 @@
 import React from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import List from '.'
 
-export default {
+const meta: Meta<typeof List> = {
   title: 'Components/List',
   component: List,
   argTypes: {},
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof List>
+}
 
-const Template: ComponentStory<typeof List> = (args) => (
-  <List {...args}>
-    <li>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident sequi
-        optio porro nulla obcaecati laudantium maxime. Minus eveniet laudantium
-        nobis consectetur mollitia architecto aliquam repudiandae maiores.
-        Consectetur corporis architecto consequatur!
-      </p>
-    </li>
-    <li>
-      <p>teste</p>
-    </li>
-    <li>
-      <p>teste</p>
-    </li>
-    <li>
-      <p>teste</p>
-    </li>
-  </List>
-)
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof List>
 
-Default.args = {}
+export const Default: Story = {
+  render: (args) => (
+    <List {...args}>
+      <li>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+          sequi optio porro nulla obcaecati laudantium maxime. Minus eveniet
+          laudantium nobis consectetur mollitia architecto aliquam repudiandae
+          maiores. Consectetur corporis architecto consequatur!
+        </p>
+      </li>
+      <li>
+        <p>teste</p>
+      </li>
+      <li>
+        <p>teste</p>
+      </li>
+      <li>
+        <p>teste</p>
+      </li>
+    </List>
+  ),
+  args: {}
+}

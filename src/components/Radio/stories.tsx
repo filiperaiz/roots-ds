@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Radio from '.'
 
-export default {
+const meta: Meta<typeof Radio> = {
   title: 'Components/Radio',
   component: Radio,
   argTypes: {
@@ -12,15 +12,17 @@ export default {
       type: 'string'
     }
   },
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Radio>
+}
 
-const TemplateDefault: ComponentStory<typeof Radio> = (args) => {
+export default meta
+
+type Story = StoryObj<typeof Radio>
+
+const Component = (args: Story) => {
   const [selected, setSelected] = useState(1)
 
   const data = {
@@ -59,26 +61,27 @@ const TemplateDefault: ComponentStory<typeof Radio> = (args) => {
   )
 }
 
-export const Default = TemplateDefault.bind({})
-
-const Template: ComponentStory<typeof Radio> = (args) => <Radio {...args} />
-
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-  text: 'content',
-  id: 'check-1',
-  value: '1',
-  name: 'checkbox1',
-  disabled: true
+export const Default: Story = {
+  render: (args) => <Component {...args} />,
+  args: {}
 }
 
-export const Error = Template.bind({})
+export const Disabled: Story = {
+  args: {
+    text: 'content',
+    id: 'check-1',
+    value: '1',
+    name: 'checkbox1',
+    disabled: true
+  }
+}
 
-Error.args = {
-  text: 'content',
-  id: 'check-1',
-  value: '1',
-  name: 'checkbox1',
-  error: true
+export const Error: Story = {
+  args: {
+    text: 'content',
+    id: 'check-1',
+    value: '1',
+    name: 'checkbox1',
+    error: true
+  }
 }

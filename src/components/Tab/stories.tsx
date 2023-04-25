@@ -1,26 +1,25 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Tab from '.'
 
-export default {
+const meta: Meta<typeof Tab> = {
   title: 'Components/Tab',
   component: Tab,
-  argTypes: {
-    name: {
-      type: 'string'
-    }
-  },
-  args: {
-    'data-id': 'action_test'
-  },
+  argTypes: {},
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Tab>
+}
 
-const Template: ComponentStory<typeof Tab> = (args) => {
+export default meta
+
+type Story = StoryObj<typeof Tab>
+
+const Component = (args: any) => {
   const [activeTab, setActiveTab] = useState(1)
 
   const handleActiveTab = (index: number) => setActiveTab(index)
@@ -69,6 +68,7 @@ const Template: ComponentStory<typeof Tab> = (args) => {
   )
 }
 
-export const Default = Template.bind({})
-
-Default.args = {}
+export const Default: Story = {
+  render: (args) => <Component {...args} />,
+  args: {}
+}

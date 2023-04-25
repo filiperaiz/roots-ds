@@ -1,25 +1,23 @@
-import React from 'react'
-
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Heading from '.'
 
-export default {
+const meta: Meta<typeof Heading> = {
   title: 'Components/Heading',
   component: Heading,
   argTypes: {},
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Heading>
+}
 
-const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Heading>
 
-Default.args = {
-  children: 'Roots Design System '
+export const Default: Story = {
+  args: {
+    children: 'Heading'
+  }
 }

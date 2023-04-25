@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Input from '.'
 
-export default {
+const meta: Meta<typeof Input> = {
   title: 'Components/Input',
   component: Input,
   argTypes: {
@@ -12,16 +12,19 @@ export default {
       type: 'string' || {}
     }
   },
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Input>
+}
 
-const Template: ComponentStory<typeof Input> = (args) => {
+export default meta
+
+type Story = StoryObj<typeof Input>
+
+const Component = (args: Story) => {
   const [value, setValue] = useState('')
+
   const handleChange = (e: {
     target: { value: React.SetStateAction<string> }
   }) => setValue(e.target.value)
@@ -29,40 +32,42 @@ const Template: ComponentStory<typeof Input> = (args) => {
   return <Input {...args} value={value} onChange={handleChange} />
 }
 
-export const Default = Template.bind({})
-
-Default.args = {
-  label: 'Nome do campo',
-  type: 'text'
+export const Default: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    label: 'Nome do campo',
+    type: 'text'
+  }
 }
 
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-  label: 'Nome do campo',
-  type: 'text',
-  disabled: true
+export const Disabled: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    ...Default.args,
+    disabled: true
+  }
 }
 
-export const Password = Template.bind({})
-
-Password.args = {
-  label: 'Sua senha',
-  type: 'password'
+export const Password: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    label: 'Sua senha',
+    type: 'password'
+  }
 }
 
-export const Error = Template.bind({})
-
-Error.args = {
-  label: 'Nome do campo',
-  type: 'text',
-  errorMessage: 'Campo obrigatório'
+export const Error: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    ...Default.args,
+    errorMessage: 'Campo obrigatório'
+  }
 }
 
-export const Money = Template.bind({})
-
-Money.args = {
-  label: 'Nome do campo',
-  type: 'text',
-  currency: true
+export const Money: Story = {
+  render: (args) => <Component {...args} />,
+  args: {
+    ...Default.args,
+    currency: true
+  }
 }

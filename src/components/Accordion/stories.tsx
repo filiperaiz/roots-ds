@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Accordion from '.'
 
-export default {
+const meta: Meta<typeof Accordion> = {
   title: 'Components/Accordion',
   component: Accordion,
   argTypes: {
@@ -15,19 +15,22 @@ export default {
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Accordion>
+}
 
-const Template: ComponentStory<typeof Accordion> = (args) => (
-  <div>
-    <Accordion {...args} />
-    <Accordion {...args} />
-    <Accordion {...args} />
-  </div>
-)
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Accordion>
 
-Default.args = {
-  children: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  title: 'Accordion'
+export const Default: Story = {
+  render: (args) => (
+    <div>
+      <Accordion {...args} />
+      <Accordion {...args} />
+      <Accordion {...args} />
+    </div>
+  ),
+  args: {
+    children: 'Lorem ipsum dolor sit.',
+    title: 'Accordion'
+  }
 }

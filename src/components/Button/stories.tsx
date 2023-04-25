@@ -1,11 +1,11 @@
 import React from 'react'
 import { MdVisibility } from 'react-icons/md'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Button from '.'
 
-export default {
+const meta: Meta<typeof Button> = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
@@ -13,40 +13,40 @@ export default {
       type: 'string'
     }
   },
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Button>
-
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
-
-export const Default = Template.bind({})
-
-Default.args = {
-  children: 'Button'
 }
 
-export const Icon = Template.bind({})
+export default meta
 
-Icon.args = {
-  children: 'Button',
-  icon: <MdVisibility />
+type Story = StoryObj<typeof Button>
+
+export const Default: Story = {
+  args: {
+    children: 'Button'
+  }
 }
 
-export const Disabled = Template.bind({})
-
-Disabled.args = {
-  children: 'Button disabled',
-  disabled: true
+export const Icon: Story = {
+  args: {
+    children: 'Button',
+    icon: <MdVisibility />
+  }
 }
 
-export const asLink = Template.bind({})
+export const Disabled: Story = {
+  args: {
+    children: 'Button disabled',
+    disabled: true
+  }
+}
 
-asLink.args = {
-  children: 'Link button',
-  as: 'a',
-  href: '/link'
+export const asLink: Story = {
+  args: {
+    children: 'Link button',
+    as: 'a',
+    href: '/link'
+  }
 }

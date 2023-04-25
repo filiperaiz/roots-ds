@@ -1,25 +1,23 @@
-import React from 'react'
-
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Text from '.'
 
-export default {
+const meta: Meta<typeof Text> = {
   title: 'Components/Text',
   component: Text,
   argTypes: {},
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Text>
+}
 
-const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Text>
 
-Default.args = {
-  children: 'Lorem ipsum dolor sit.'
+export const Default: Story = {
+  args: {
+    children: 'Lorem ipsum dolor sit.'
+  }
 }

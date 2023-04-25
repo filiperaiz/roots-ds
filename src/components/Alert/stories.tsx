@@ -1,10 +1,8 @@
-import React from 'react'
-
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react'
 
 import Alert from '.'
 
-export default {
+const meta: Meta<typeof Alert> = {
   title: 'Components/Alert',
   component: Alert,
   argTypes: {
@@ -12,19 +10,17 @@ export default {
       type: 'string'
     }
   },
-  args: {
-    'data-id': 'action_test'
-  },
+  args: {},
   parameters: {
     controls: { expanded: true }
   }
-} as ComponentMeta<typeof Alert>
+}
+export default meta
 
-const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
+type Story = StoryObj<typeof Alert>
 
-export const Default = Template.bind({})
-
-Default.args = {
-  children:
-    'Lembre-se de olhar na caixa de lixo eletrônico (spam), para garantir que recebeu o e-mail.'
+export const Default: Story = {
+  args: {
+    children: 'Lorem ipsum dolor'
+  }
 }
