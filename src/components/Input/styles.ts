@@ -1,5 +1,5 @@
 import InputMask from 'react-input-mask'
-import NumberFormat from 'react-number-format'
+import { NumberFormatBase } from 'react-number-format'
 
 import styled, { css, DefaultTheme } from 'styled-components'
 
@@ -83,7 +83,7 @@ export const InputWrapper = styled.div<InputWrapperProps>`
 
 export const InputText = styled(InputMask)``
 
-export const InputCurrency = styled(NumberFormat)``
+export const InputCurrency = styled(NumberFormatBase)``
 
 export const Label = styled.label`
   ${({ theme }) => css`

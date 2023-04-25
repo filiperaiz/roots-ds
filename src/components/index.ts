@@ -12,5 +12,4 @@ export { default as Select } from './Select'
 export { default as Tab } from './Tab'
 export { default as Text } from './Text'
 export { default as Widget } from './Widget'
-export { default as Teste } from './Teste'
 // export_components
