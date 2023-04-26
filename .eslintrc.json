@@ -39,6 +39,7 @@
     "react/prop-types": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react/jsx-filename-extension": [0],
     "react/jsx-props-no-spreading": "off",
     "react/jsx-one-expression-per-line": "off",

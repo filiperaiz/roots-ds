@@ -4,6 +4,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     'src/components/**/*.ts(x)?',
+    '!src/components/**/styles.ts(x)?',
     '!src/**/stories.ts(x)?',
     '!src/assets/**/*.ts(x)',
     '!src/utils/**/*.ts(x)',

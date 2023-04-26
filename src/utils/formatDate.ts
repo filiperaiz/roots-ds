@@ -1,17 +1,18 @@
-import { format } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
+const transformDate = (date = new Date(), fmt = 'dd/MM/yyyy') => {
+  const day = date.getDate().toString().padStart(2, '0')
+  const month = (date.getMonth() + 1).toString().padStart(2, '0')
+  const year = date.getFullYear().toString()
 
-const transformDate = (date = new Date(), fmt = 'dd/MM/yyyy') =>
-  format(date, fmt, { locale: ptBR })
+  const dateObj: any = { dd: day, MM: month, yyyy: year }
 
-const formatDate = (date: string, fmt: string) => {
-  if (typeof date === 'string') {
-    const dateString = date.replace(/-/g, '/')
+  return fmt.replace(/dd|MM|yyyy/g, (match) => dateObj[match])
+}
 
-    return transformDate(new Date(dateString), fmt)
-  }
+const formatDate = (date: string | Date, fmt: string) => {
+  const dateObject =
+    typeof date === 'string' ? new Date(date.replace(/-/g, '/')) : date
 
-  return transformDate(date, fmt)
+  return transformDate(dateObject, fmt)
 }
 
 export default formatDate

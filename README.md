@@ -12,10 +12,10 @@ This project contains shareable styles of components, UI Components using React 
 Install peerDependencies in your project
 
 ```
-react: ^17.0.2 or higher
-react-dom: ^17.0.2 or higher
-react-icons: ^4.3.1 or higher
-styled-components: ^5.3.3 or higher
+react: ^18.x.x or higher
+react-dom: ^18.x.x or higher
+react-icons: ^4.8.x or higher
+styled-components: ^5.3.x or higher
 ```
 
 ## Commands
