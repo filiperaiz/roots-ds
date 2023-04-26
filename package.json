@@ -1,5 +1,6 @@
 {
   "name": "@filiperaiz/roots-ds",
+   "version": "1.0.1",
   "publishConfig": {
     "@filiperaiz:registry": "https://npm.pkg.github.com"
   },
@@ -7,7 +8,6 @@
     "type": "git",
     "url": "https://github.com/filiperaiz/roots-ds.git"
   },
-  "version": "1.0.0",
   "private": false,
   "keywords": [],
   "author": "Filipe Raiz",
