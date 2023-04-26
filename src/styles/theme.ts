@@ -52,7 +52,7 @@ export default {
     }
   },
   font: {
-    family: 'Source Sans Pro, sans-serif',
+    family: 'Atkinson Hyperlegible, sans-serif',
     size: {
       xs: '12px',
       sm: '14px',

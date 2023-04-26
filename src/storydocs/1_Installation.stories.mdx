@@ -9,13 +9,13 @@ Primeiro você precisa instalá-lo usando NPM ou Yarn.
 #### Usando Yarn
 
 ```sh
-$ yarn add roots-design-system
+$ yarn add @filiperaiz/roots-ds
 ```
 
 #### Usando NPM
 
 ```sh
-$ npm i roots-design-system
+$ npm i @filiperaiz/roots-ds
 ```
 
 
@@ -25,11 +25,13 @@ $ npm i roots-design-system
 import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'roots-design-system';
+import { themeTokens, GlobalStyles } from '@filiperaiz/roots-ds';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeTokens}>
+      <GlobalStyles />
+
        {/* seu código aqui */}
     </ThemeProvider>
   );
