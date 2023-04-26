@@ -1,6 +1,6 @@
 {
   "name": "@filiperaiz/roots-ds",
-   "version": "1.0.1",
+   "version": "1.0.0",
   "publishConfig": {
     "@filiperaiz:registry": "https://npm.pkg.github.com"
   },
