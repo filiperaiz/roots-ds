@@ -16,12 +16,6 @@ formatCurrency(value);
 formatCurrency(value, true);
 ```
 
-|Input(date or string)   | Segundo parâmetro | Output(string) |
-|------------------------| ------------------| -------------- |
-| '1234'                 | false             | R$ 12,34       |
-| 1234                   | false             | R$ 12,34       |
-| R$ 12,34               | true              | '1234'         |
-
 #
 ## Data
 Esta função retorna o valor formatado para datas.
@@ -36,11 +30,6 @@ formatDate(value, fmt);
 formatDate(value, 'dd-MM-yyyy');
 ```
 
-|Input(date or string)   | Segundo parâmetro | Output(string) |
-|------------------------| ------------------| -------------- |
-| 2020-01-31             | dd/MM/yyyy        | 31/01/2020     |
-| 31/01/2020             | dd-MM-yyyy        | 31-01-2020     |
-
 #
 ## Percent
 Esta função retorna o valor formatado para porcentagem.
@@ -51,13 +40,6 @@ import { formatPercent } from 'roots-design-system'
 formatPercent(value);
 
 ```
-
-|Input(string or number)   | Output(string)  |
-|--------------------------| ----------------|
-| '1234'                   | 1.234,00%       |
-| 12                       | 12,00%          |
-| 12.34                    | 12,34%          |
-| 12,34                    | NaN%            |
 
 #
 ## Hide Email
@@ -70,10 +52,6 @@ formatEmail(value);
 
 ```
 
-| Input(string)         | Output(string)     |
-| --------------------- | ------------------ |
-| userEmail@email.com   | u*\****l@email.com |
-
 #
 ## Remove mask
 Esta função retorna o valor formatado sem caracteres especiais.
@@ -85,9 +63,3 @@ removeMask(value);
 
 ```
 
-|Input(string)    | Output(string)       |
-|---------------- | -------------------- |
-| R$ 1.234,00     | 123400               |
-| 123.456.789-00  | 12345678900          |
-| (12)3456-7890   | 1234567890           |
-| 1.a-2/b_3(c)    | 1a2b3c               |

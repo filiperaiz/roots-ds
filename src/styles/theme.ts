@@ -112,17 +112,19 @@ export default {
   border: {
     radius: {
       none: '0px',
+      xs: '4px',
       sm: '8px',
       md: '16px',
       lg: '24px',
-      pill: '500px',
+      round: '999px',
       circle: '50%'
     },
     width: {
       none: '0px',
       sm: '1px',
       md: '2px',
-      lg: '4px'
+      lg: '4px',
+      xl: '8px'
     }
   },
   transition: {
@@ -130,8 +132,9 @@ export default {
     fast: '0.1s ease-in-out'
   },
   shadow: {
-    sm: '0px 4px 8px rgba(115, 115, 115, 0.16)',
-    md: '0px 8px 24px rgba(115, 115, 115, 0.16)',
-    lg: '0px 16px 32px rgba(115, 115, 115, 0.16)'
+    sm: '0px 1px 3px rgba(19, 21, 22, 0.1), 0px 1px 2px rgba(19, 21, 22, 0.06)',
+    md: '0px 4px 8px -2px rgba(19, 21, 22, 0.1), 0px 2px 4px -2px rgba(19, 21, 22, 0.06)',
+    lg: '0px 12px 16px -4px rgba(19, 21, 22, 0.08), 0px 4px 6px -2px rgba(19, 21, 22, 0.03)',
+    xl: '0px 20px 24px -4px rgba(16, 24, 40, 0.08),0px 8px 8px -4px rgba(16, 24, 40, 0.03)'
   }
 } as const

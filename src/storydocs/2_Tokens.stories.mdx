@@ -3,8 +3,6 @@ import theme from '../styles/theme'
 
 <Meta title="Documentação/Tokens" />
 
-# Todos os tokens
-
 # Colors
 
 <ColorPalette>
@@ -136,6 +134,7 @@ import theme from '../styles/theme'
 </ColorPalette>
 
 <hr />
+
 # Font
 
 ### Family
@@ -159,7 +158,7 @@ import theme from '../styles/theme'
 
 ### Sizes
 
-<div style={{display: 'flex', gap: '16px'}}>
+<div style={{ display: 'flex', gap: '16px' }}>
   <div id="display">
     <h4>Display</h4>
     <table>
@@ -268,7 +267,6 @@ import theme from '../styles/theme'
     </table>
   </div>
 </div>
-
 <div id="line-height">
   <h3>Line height</h3>
   <table>
@@ -322,6 +320,131 @@ import theme from '../styles/theme'
 <hr />
 
 # Spacings
+
+<div style={{ display: 'flex', gap: '16px' }}>
+  <div id="spacing1">
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>s0</td>
+          <td>theme.spacing.s0</td>
+          <td>0px</td>
+        </tr>
+        <tr>
+          <td>s2</td>
+          <td>theme.spacing.s2</td>
+          <td>2px</td>
+        </tr>
+        <tr>
+          <td>s4</td>
+          <td>theme.spacing.s4</td>
+          <td>4px</td>
+        </tr>
+        <tr>
+          <td>s8</td>
+          <td>theme.spacing.s8</td>
+          <td>8px</td>
+        </tr>
+        <tr>
+          <td>s12</td>
+          <td>theme.spacing.s12</td>
+          <td>12px</td>
+        </tr>
+        <tr>
+          <td>s16</td>
+          <td>theme.spacing.s16</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td>s20</td>
+          <td>theme.spacing.s20</td>
+          <td>20px</td>
+        </tr>
+        <tr>
+          <td>s32</td>
+          <td>theme.spacing.s32</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>s40</td>
+          <td>theme.spacing.s40</td>
+          <td>40px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="spacing2">
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>s48</td>
+          <td>theme.spacing.s48</td>
+          <td>48px</td>
+        </tr>
+
+        <tr>
+          <td>s64</td>
+          <td>theme.spacing.s64</td>
+          <td>64px</td>
+        </tr>
+        <tr>
+          <td>s80</td>
+          <td>theme.spacing.s80</td>
+          <td>80px</td>
+        </tr>
+        <tr>
+          <td>s96</td>
+          <td>theme.spacing.s96</td>
+          <td>96px</td>
+        </tr>
+        <tr>
+          <td>s128</td>
+          <td>theme.spacing.s128</td>
+          <td>128px</td>
+        </tr>
+        <tr>
+          <td>s160</td>
+          <td>theme.spacing.s160</td>
+          <td>160px</td>
+        </tr>
+        <tr>
+          <td>s192</td>
+          <td>theme.spacing.s192</td>
+          <td>192px</td>
+        </tr>
+        <tr>
+          <td>s224</td>
+          <td>theme.spacing.s224</td>
+          <td>224px</td>
+        </tr>
+        <tr>
+          <td>s256</td>
+          <td>theme.spacing.s256</td>
+          <td>256px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr />
+
+# Layers (z-index)
+
 <table>
   <thead style={{ backgroundColor: '#d4d4d4' }}>
     <tr>
@@ -332,171 +455,195 @@ import theme from '../styles/theme'
   </thead>
   <tbody>
     <tr>
-      <td>s0</td>
-      <td>theme.spacing.s0</td>
-      <td>0px</td>
+      <td>base</td>
+      <td>theme.layers.base</td>
+      <td>10</td>
     </tr>
     <tr>
-      <td>s2</td>
-      <td>theme.spacing.s2</td>
-      <td>2px</td>
+      <td>menu</td>
+      <td>theme.layers.menu</td>
+      <td>20</td>
     </tr>
     <tr>
-      <td>s4</td>
-      <td>theme.spacing.s4</td>
-      <td>4px</td>
+      <td>overlay</td>
+      <td>theme.layers.overlay</td>
+      <td>30</td>
     </tr>
     <tr>
-      <td>s8</td>
-      <td>theme.spacing.s8</td>
-      <td>8px</td>
+      <td>modal</td>
+      <td>theme.layers.modal</td>
+      <td>40</td>
     </tr>
     <tr>
-      <td>s12</td>
-      <td>theme.spacing.s12</td>
-      <td>12px</td>
+      <td>alwaysOnTop</td>
+      <td>theme.layers.alwaysOnTop</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>
+
+# Border
+
+<div style={{ display: 'flex', gap: '16px' }}>
+  <div id="radius">
+    <h4>Radius</h4>
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>none</td>
+          <td>theme.border.radius.none</td>
+          <td>0px</td>
+        </tr>
+        <tr>
+          <td>xs</td>
+          <td>theme.border.radius.xs</td>
+          <td>4px</td>
+        </tr>
+        <tr>
+          <td>sm</td>
+          <td>theme.border.radius.sm</td>
+          <td>8px</td>
+        </tr>
+        <tr>
+          <td>md</td>
+          <td>theme.border.radius.md</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td>lg</td>
+          <td>theme.border.radius.lg</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>round</td>
+          <td>theme.border.radius.round</td>
+          <td>999px</td>
+        </tr>
+        <tr>
+          <td>circle</td>
+          <td>theme.border.radius.circle</td>
+          <td>50%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="width">
+    <h4>Width</h4>
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>none</td>
+          <td>theme.border.width.none</td>
+          <td>0px</td>
+        </tr>
+        <tr>
+          <td>sm</td>
+          <td>theme.border.width.sm</td>
+          <td>1px</td>
+        </tr>
+        <tr>
+          <td>md</td>
+          <td>theme.border.width.md</td>
+          <td>2px</td>
+        </tr>
+        <tr>
+          <td>lg</td>
+          <td>theme.border.width.lg</td>
+          <td>4px</td>
+        </tr>
+        <tr>
+          <td>xl</td>
+          <td>theme.border.width.xl</td>
+          <td>8px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr />
+
+# Transition
+
+<table>
+  <thead style={{ backgroundColor: '#d4d4d4' }}>
+    <tr>
+      <th>Name</th>
+      <th>Token</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>default</td>
+      <td>theme.transition.default</td>
+      <td>0.3s ease-in-out</td>
     </tr>
     <tr>
-      <td>s16</td>
-      <td>theme.spacing.s16</td>
-      <td>16px</td>
-    </tr>
-    <tr>
-      <td>s20</td>
-      <td>theme.spacing.s20</td>
-      <td>20px</td>
-    </tr>
-    <tr>
-      <td>s32</td>
-      <td>theme.spacing.s32</td>
-      <td>32px</td>
-    </tr>
-    <tr>
-      <td>s32</td>
-      <td>theme.spacing.s32</td>
-      <td>32px</td>
-    </tr>
-    <tr>
-      <td>s40</td>
-      <td>theme.spacing.s40</td>
-      <td>40px</td>
-    </tr>
-    <tr>
-      <td>s48</td>
-      <td>theme.spacing.s48</td>
-      <td>48px</td>
-    </tr>
-    <tr>
-      <td>s64</td>
-      <td>theme.spacing.s64</td>
-      <td>64px</td>
-    </tr>
-    <tr>
-      <td>s80</td>
-      <td>theme.spacing.s80</td>
-      <td>80px</td>
-    </tr>
-    <tr>
-      <td>s96</td>
-      <td>theme.spacing.s96</td>
-      <td>96px</td>
-    </tr>
-    <tr>
-      <td>s128</td>
-      <td>theme.spacing.s128</td>
-      <td>128px</td>
-    </tr>
-    <tr>
-      <td>s160</td>
-      <td>theme.spacing.s160</td>
-      <td>160px</td>
-    </tr>
-    <tr>
-      <td>s192</td>
-      <td>theme.spacing.s192</td>
-      <td>192px</td>
-    </tr>
-    <tr>
-      <td>s224</td>
-      <td>theme.spacing.s224</td>
-      <td>224px</td>
-    </tr>
-    <tr>
-      <td>s256</td>
-      <td>theme.spacing.s256</td>
-      <td>256px</td>
+      <td>fast</td>
+      <td>theme.transition.fast</td>
+      <td>0.1s ease-in-out</td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-# Layers (z-index)
+# Shadow
+
 <table>
-    <thead style={{ backgroundColor: '#d4d4d4' }}>
-      <tr>
-        <th>Name</th>
-        <th>Token</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>base</td>
-        <td>theme.layers.base</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>menu</td>
-        <td>theme.layers.menu</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>overlay</td>
-        <td>theme.layers.overlay</td>
-        <td>30</td>
-      </tr>
-      <tr>
-        <td>modal</td>
-        <td>theme.layers.modal</td>
-        <td>40</td>
-      </tr>
-      <tr>
-        <td>alwaysOnTop</td>
-        <td>theme.layers.alwaysOnTop</td>
-        <td>50</td>
-      </tr>
-    </tbody> 
+  <thead style={{ backgroundColor: '#d4d4d4' }}>
+    <tr>
+      <th>Name</th>
+      <th>Token</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sm</td>
+      <td>theme.shadow.sm</td>
+      <td>
+        0px 1px 3px rgba(19, 21, 22, 0.1), 0px 1px 2px rgba(19, 21, 22, 0.06)
+      </td>
+    </tr>
+    <tr>
+      <td>md</td>
+      <td>theme.shadow.md</td>
+      <td>
+        0px 4px 8px -2px rgba(19, 21, 22, 0.1), 0px 2px 4px -2px rgba(19, 21,
+        22, 0.06)
+      </td>
+    </tr>
+    <tr>
+      <td>lg</td>
+      <td>theme.shadow.lg</td>
+      <td>
+        0px 12px 16px -4px rgba(19, 21, 22, 0.08), 0px 4px 6px -2px rgba(19, 21,
+        22, 0.03)
+      </td>
+    </tr>
+    <tr>
+      <td>xl</td>
+      <td>theme.shadow.xl</td>
+      <td>
+        0px 20px 24px -4px rgba(16, 24, 40, 0.08),0px 8px 8px -4px rgba(16, 24,
+        40, 0.03)
+      </td>
+    </tr>
+  </tbody>
 </table>
-
-
-## Border
-
-| Variable                           | Value                                 |
-| ---------------------------------- | ------------------------------------- |
-| theme.border.radius.none           | 0px                                   |
-| theme.border.radius.sm             | 8px                                   |
-| theme.border.radius.md             | 16px                                  |
-| theme.border.radius.lg             | 24px                                  |
-| theme.border.radius.pill           | 500px                                 |
-| theme.border.radius.circle         | 50%                                   |
-| ---------------------------------- | ------------------------------------- |
-| theme.border.width.none            | 0px                                   |
-| theme.border.width.sm              | 1px                                   |
-| theme.border.width.md              | 2px                                   |
-| theme.border.width.lg              | 4px                                   |
-
-## Transition
-
-| Variable                 | Value            |
-| ------------------------ | ---------------- |
-| theme.transition.default | 0.3s ease-in-out |
-| theme.transition.fast    | 0.1s ease-in-out |
-
-## Shadow
-
-| Variable        | Value                                   |
-| --------------- | --------------------------------------- |
-| theme.shadow.sm | 0px 4px 8px rgba(115, 115, 115, 0.16)   |
-| theme.shadow.md | 0px 8px 24px rgba(115, 115, 115, 0.16)  |
-| theme.shadow.lg | 0px 16px 32px rgba(115, 115, 115, 0.16) |

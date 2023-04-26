@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     width: 100%;
     z-index: ${theme.layers.modal};
 
-    ${media.lessThan('small')`
+    ${media.lessThan('medium')`
         border-radius: 0;
         bottom: 0;
         left: 0;

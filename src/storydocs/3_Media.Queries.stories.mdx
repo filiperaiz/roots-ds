@@ -8,15 +8,45 @@ import { Meta } from '@storybook/addon-docs'
 import { media } from 'roots-design-system'
 ```
 
-| Variable               | Value                   |
-| ---------------------- | ----------------------- |
-| small                  | 576px  (Mobile)         |
-| medium                 | 768px  (Tablet)         |
-| large                  | 992px  (Desktop)        |
-| xlarge                 | 1200px (Large Desktop)  |
-| xxlarge                | 1400px (Larger Desktop) |
+<table>
+  <thead style={{ backgroundColor: '#d4d4d4' }}>
+    <tr>
+      <th>Name</th>
+      <th>Variable</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mobile</td>
+      <td>small</td>
+      <td>320px</td>
+    </tr>
+    <tr>
+      <td>Tablet</td>
+      <td>medium</td>
+      <td>672px</td>
+    </tr>
+    <tr>
+      <td>Desktop</td>
+      <td>large</td>
+      <td>1056px</td>
+    </tr>
+    <tr>
+      <td>Large Desktop</td>
+      <td>xlarge</td>
+      <td>1312px</td>
+    </tr>
+    <tr>
+      <td>Larger Desktop</td>
+      <td>xxlarge</td>
+      <td>1584px</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Uso
+
 ```js
   ${media.lessThan('small')`
    ...code
@@ -29,7 +59,7 @@ import { media } from 'roots-design-system'
 
 ## Exemplo base com media queries
 
-``` css
+```css
 import styled from 'styled-components';
 
 import { media } from 'roots-design-system';
@@ -45,3 +75,4 @@ export const Wrapper = styled.div`
     `}
   `}
 `;
+```

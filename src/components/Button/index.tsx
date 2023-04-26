@@ -34,7 +34,7 @@ export type ButtonProps = {
     | 'danger'
     | 'warning'
     | 'success'
-  radius?: 'none' | 'sm' | 'md' | 'lg' | 'pill' | 'circle'
+  radius?: 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'round' | 'circle'
   mt?: SpacingProps
   mb?: SpacingProps
   icon?: JSX.Element

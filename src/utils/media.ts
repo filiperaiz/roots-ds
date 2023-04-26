@@ -3,11 +3,11 @@
 import { css } from 'styled-components'
 
 export const defaultBreakpoints = {
-  xxlarge: '1400px',
-  xlarge: '1200px',
-  large: '992px',
-  medium: '768px',
-  small: '576px'
+  xxlarge: '1584px',
+  xlarge: '1312px',
+  large: '1056px',
+  medium: '672px',
+  small: '320px'
 }
 
 export function generateMedia(breakpoints = defaultBreakpoints) {
