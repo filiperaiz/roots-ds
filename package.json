@@ -3,6 +3,10 @@
   "publishConfig": {
     "@filiperaiz:registry": "https://npm.pkg.github.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/filiperaiz/roots-ds.git"
+  },
   "version": "1.0.0",
   "private": false,
   "keywords": [],
