@@ -28,7 +28,7 @@ export const Wrapper = styled.div<WrapperProps>`
 
     margin-bottom: ${mb ? theme.spacing[mb] : 0};
     margin-top: ${mt ? theme.spacing[mt] : 0};
-    padding: ${theme.spacing.xxxs};
+    padding: ${theme.spacing.s16};
     position: relative;
     text-align: left;
 
@@ -36,18 +36,18 @@ export const Wrapper = styled.div<WrapperProps>`
 
     .icon {
       color: ${theme.colors.base.white};
-      font-size: ${theme.font.sizes.md};
+      font-size: ${theme.font.display.xs};
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
 
       &.info {
-        left: ${theme.spacing.xxxs};
+        left: ${theme.spacing.s16};
       }
 
       &.close {
         cursor: pointer;
-        right: ${theme.spacing.xxxs};
+        right: ${theme.spacing.s16};
       }
     }
   `}
@@ -56,9 +56,9 @@ export const Wrapper = styled.div<WrapperProps>`
 export const Text = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.base.white};
-    font-family: ${theme.font.family.body};
-    font-size: ${theme.font.sizes.xs};
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.size.md};
     font-weight: ${theme.font.weight.bold};
-    padding: 0 ${theme.spacing.xs};
+    padding: 0 ${theme.spacing.s32};
   `}
 `

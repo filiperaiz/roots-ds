@@ -8,7 +8,7 @@ const wrapperModifiers = {
       border-radius: 50%;
       color: ${theme.colors.primary[400]};
       content: '●';
-      font-size: ${theme.font.sizes.sm};
+      font-size: ${theme.font.size.xl};
       margin-right: 10px;
     }
   `
@@ -28,7 +28,7 @@ export const Wrapper = styled.ul<WrapperProps>`
       align-items: center;
       display: flex;
       justify-content: flex-start;
-      padding-bottom: ${theme.spacing.xxxs};
+      padding-bottom: ${theme.spacing.s16};
 
       &:last-child {
         padding-bottom: 0;

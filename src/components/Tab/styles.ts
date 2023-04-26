@@ -20,15 +20,15 @@ export const Wrapper = styled.li<WrapperProps>`
       ${active ? theme.colors.primary[400] : theme.colors.neutral[100]};
     cursor: pointer;
     flex-grow: 1;
-    padding: ${theme.spacing.nano};
+    padding: ${theme.spacing.s8};
     text-align: center;
 
     h5 {
       color: ${theme.colors.base.black};
-      font-family: ${theme.font.family.heading};
-      font-size: ${theme.font.sizes.xs};
+      font-family: ${theme.font.family};
+      font-size: ${theme.font.size.md};
       font-weight: ${theme.font.weight.bold};
-      line-height: ${theme.font.lineHeights.sm};
+      line-height: ${theme.font.lineHeight.sm};
     }
 
     &:hover {
@@ -41,6 +41,6 @@ export const Wrapper = styled.li<WrapperProps>`
 export const TabContent = styled.div<WrapperProps>`
   ${({ theme, active }) => css`
     display: ${active ? 'flex' : 'none'};
-    padding: ${theme.spacing.xxs} 0;
+    padding: ${theme.spacing.s20} 0;
   `}
 `

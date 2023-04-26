@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export default {
   colors: {
     primary: {
@@ -51,33 +52,27 @@ export default {
     }
   },
   font: {
-    family: {
-      body: 'Source Sans Pro, sans-serif',
-      heading: 'Roboto, sans-serif'
+    family: 'Source Sans Pro, sans-serif',
+    size: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '18px',
+      xl: '20px'
     },
-    sizes: {
-      xxxs: '12px',
-      xxs: '14px',
-      xs: '16px',
-      sm: '20px',
-      md: '24px',
-      lg: '32px',
-      xl: '40px',
-      xxl: '48px',
-      xxxl: '64px'
+    display: {
+      xs: '24px',
+      sm: '30px',
+      md: '36px',
+      lg: '48px',
+      xl: '60px',
+      xxl: '72px'
     },
     weight: {
-      hairline: 100,
-      thin: 200,
-      light: 300,
-      normal: 400,
-      medium: 500,
-      semibold: 600,
-      bold: 700,
-      extrabold: 800,
-      black: 900
+      regular: 400,
+      bold: 700
     },
-    lineHeights: {
+    lineHeight: {
       default: '100%',
       xs: '115%',
       sm: '120%',
@@ -88,17 +83,24 @@ export default {
     }
   },
   spacing: {
-    min: '4px',
-    nano: '8px',
-    xxxs: '16px',
-    xxs: '24px',
-    xs: '32px',
-    sm: '40px',
-    md: '48px',
-    lg: '56px',
-    xl: '64px',
-    xxl: '80px',
-    xxxl: '120x'
+    's0': '0px',
+    's2': '2px',
+    's4': '4px',
+    's8': '8px',
+    's12': '12px',
+    's16': '16px',
+    's20': '20px',
+    's32': '32px',
+    's40': '40px',
+    's48': '48px',
+    's64': '64px',
+    's80': '80px',
+    's96': '96px',
+    's128': '128px',
+    's160': '160px',
+    's192': '192px',
+    's224': '224px',
+    's256': '256px'
   },
   layers: {
     base: 10,

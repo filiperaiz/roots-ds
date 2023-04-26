@@ -85,11 +85,11 @@ export const Select = styled.select`
     background: transparent;
     border: 0;
     color: ${theme.colors.base.black};
-    font-family: ${theme.font.family.body};
-    font-size: ${theme.font.sizes.xs};
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.size.md};
     height: 100%;
     outline: none;
-    padding: 0 ${theme.spacing.xxxs};
+    padding: 0 ${theme.spacing.s16};
     width: 100%;
     z-index: 1;
   `}
@@ -97,7 +97,7 @@ export const Select = styled.select`
 
 export const Option = styled.option`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xs};
+    font-size: ${theme.font.size.md};
   `}
 `
 
@@ -106,18 +106,18 @@ export const Label = styled.label`
     background-color: ${theme.colors.base.white};
     color: ${theme.colors.base.black};
     display: block;
-    font-family: ${theme.font.family.heading};
-    font-size: ${theme.font.sizes.xs};
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.size.md};
     font-weight: ${theme.font.weight.bold};
-    line-height: ${theme.font.lineHeights.sm};
-    margin-bottom: ${theme.spacing.min};
+    line-height: ${theme.font.lineHeight.sm};
+    margin-bottom: ${theme.spacing.s4};
   `}
 `
 
 export const Error = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.danger[400]};
-    font-size: ${theme.font.sizes.xxs};
-    margin-top: ${theme.spacing.min};
+    font-size: ${theme.font.size.sm};
+    margin-top: ${theme.spacing.s4};
   `}
 `

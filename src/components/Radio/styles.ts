@@ -83,9 +83,9 @@ export const Label = styled.label`
     color: ${theme.colors.base.black};
     cursor: pointer;
     flex: 1;
-    font-size: ${theme.font.sizes.xs};
-    line-height: ${theme.font.lineHeights.md};
-    padding-left: ${theme.spacing.xxxs};
+    font-size: ${theme.font.size.md};
+    line-height: ${theme.font.lineHeight.md};
+    padding-left: ${theme.spacing.s16};
   `}
 `
 type WrapperProps = Pick<RadioProps, 'disabled' | 'error' | 'mt' | 'mb'>

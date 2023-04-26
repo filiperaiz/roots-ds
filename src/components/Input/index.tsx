@@ -8,18 +8,23 @@ import MasksInput from 'utils/masks'
 import * as S from './styles'
 
 type SpacingProps =
-  | ''
-  | 'min'
-  | 'nano'
-  | 'xxxs'
-  | 'xxs'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xxl'
+  | 's0'
+  | 's2'
+  | 's8'
+  | 's12'
+  | 's16'
+  | 's20'
+  | 's32'
+  | 's40'
+  | 's48'
+  | 's64'
+  | 's80'
+  | 's96'
+  | 's128'
+  | 's160'
+  | 's192'
+  | 's224'
+  | 's256'
 
 type MaskProps = {
   mask: string
@@ -67,8 +72,8 @@ const Input = ({
   mask,
   currency = false,
   capitalize = false,
-  mb = 'xxxs',
-  mt = '',
+  mt = 's0',
+  mb = 's16',
   ...props
 }: InputProps) => {
   const [maskFormat, setMask] = useState('')

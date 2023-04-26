@@ -16,27 +16,27 @@ type WrapperProps = Pick<
 
 const wrapperModifiers = {
   sm: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xxs};
+    font-size: ${theme.font.size.sm};
     height: 25px;
 
     svg {
-      font-size: ${theme.font.sizes.sm};
+      font-size: ${theme.font.size.xl};
     }
   `,
   md: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.xs};
+    font-size: ${theme.font.size.md};
     height: 48px;
 
     svg {
-      font-size: ${theme.font.sizes.lg};
+      font-size: ${theme.font.display.sm};
     }
   `,
   lg: (theme: DefaultTheme) => css`
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.display.xs};
     height: 60px;
 
     svg {
-      font-size: ${theme.font.sizes.lg};
+      font-size: ${theme.font.display.sm};
     }
   `,
   fullWidth: () => css`
@@ -45,7 +45,7 @@ const wrapperModifiers = {
   iconLeft: (theme: DefaultTheme) => css`
     svg {
       + span {
-        margin-left: ${theme.spacing.nano};
+        margin-left: ${theme.spacing.s8};
       }
     }
   `,
@@ -54,7 +54,7 @@ const wrapperModifiers = {
 
     svg {
       + span {
-        margin-right: ${theme.spacing.nano};
+        margin-right: ${theme.spacing.s8};
       }
     }
   `,
@@ -152,13 +152,13 @@ export const Wrapper = styled.button<WrapperProps>`
     border-radius: ${radius ? theme.border.radius[radius] : 0};
     cursor: pointer;
     display: flex;
-    font-family: ${theme.font.family.heading};
+    font-family: ${theme.font.family};
     font-weight: ${theme.font.weight.bold};
     justify-content: center;
     margin-bottom: ${mb ? theme.spacing[mb] : 0};
     margin-top: ${mt ? theme.spacing[mt] : 0};
-    padding-left: ${theme.spacing.sm};
-    padding-right: ${theme.spacing.sm};
+    padding-left: ${theme.spacing.s40};
+    padding-right: ${theme.spacing.s40};
     text-decoration: none;
     text-transform: uppercase;
 

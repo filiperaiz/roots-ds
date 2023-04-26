@@ -5,7 +5,8 @@ import theme from '../styles/theme'
 
 # Todos os tokens
 
-## Colors
+# Colors
+
 <ColorPalette>
   <h2>Neutral colors</h2>
   <ColorItem
@@ -134,101 +135,340 @@ import theme from '../styles/theme'
   />
 </ColorPalette>
 
-## Font
+<hr />
+# Font
 
-##### Family
+### Family
 
-| Variable                  | Value           |
-| ------------------------- | --------------- |
-| theme.font.family.body    | Source Sans Pro |
-| theme.font.family.heading | Roboto          |
+<table>
+  <thead style={{ backgroundColor: '#d4d4d4' }}>
+    <tr>
+      <th>Name</th>
+      <th>Token</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Font family</td>
+      <td>theme.font.family</td>
+      <td>Source Sans Pro, sans-serif</td>
+    </tr>
+  </tbody>
+</table>
 
-#
+### Sizes
 
-##### Sizes
+<div style={{display: 'flex', gap: '16px'}}>
+  <div id="display">
+    <h4>Display</h4>
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>xs</td>
+          <td>theme.font.display.xs</td>
+          <td>24px</td>
+        </tr>
+        <tr>
+          <td>sm</td>
+          <td>theme.font.display.sm</td>
+          <td>30px</td>
+        </tr>
+        <tr>
+          <td>md</td>
+          <td>theme.font.display.md</td>
+          <td>36px</td>
+        </tr>
+        <tr>
+          <td>lg</td>
+          <td>theme.font.display.lg</td>
+          <td>48px</td>
+        </tr>
+        <tr>
+          <td>xl</td>
+          <td>theme.font.display.xl</td>
+          <td>60px</td>
+        </tr>
+        <tr>
+          <td>xxl</td>
+          <td>theme.font.display.xxl</td>
+          <td>72px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="texts">
+    <h4>Texts</h4>
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>xs</td>
+          <td>theme.font.size.xs</td>
+          <td>12px</td>
+        </tr>
+        <tr>
+          <td>sm</td>
+          <td>theme.font.size.sm</td>
+          <td>14px</td>
+        </tr>
+        <tr>
+          <td>md</td>
+          <td>theme.font.size.md</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td>lg</td>
+          <td>theme.font.size.lg</td>
+          <td>18px</td>
+        </tr>
+        <tr>
+          <td>xl</td>
+          <td>theme.font.size.xl</td>
+          <td>20px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="weight">
+    <h4>Weight</h4>
+    <table>
+      <thead style={{ backgroundColor: '#d4d4d4' }}>
+        <tr>
+          <th>Name</th>
+          <th>Token</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>regular</td>
+          <td>theme.font.weight.regular</td>
+          <td>400</td>
+        </tr>
+        <tr>
+          <td>bold</td>
+          <td>theme.font.weight.bold</td>
+          <td>700</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-| Variable              | Value |
-| --------------------- | ----- |
-| theme.font.sizes.xxxs | 12px  |
-| theme.font.sizes.xxs  | 14px  |
-| theme.font.sizes.xs   | 16px  |
-| theme.font.sizes.sm   | 20px  |
-| theme.font.sizes.md   | 24px  |
-| theme.font.sizes.lg   | 32px  |
-| theme.font.sizes.xl   | 40px  |
-| theme.font.sizes.xxl  | 48px  |
-| theme.font.sizes.xxxl | 64px  |
+<div id="line-height">
+  <h3>Line height</h3>
+  <table>
+    <thead style={{ backgroundColor: '#d4d4d4' }}>
+      <tr>
+        <th>Name</th>
+        <th>Token</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>default</td>
+        <td>theme.font.lineHeight.default</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>xs</td>
+        <td>theme.font.lineHeight.xs</td>
+        <td>115%</td>
+      </tr>
+      <tr>
+        <td>sm</td>
+        <td>theme.font.lineHeight.sm</td>
+        <td>120%</td>
+      </tr>
+      <tr>
+        <td>md</td>
+        <td>theme.font.lineHeight.md</td>
+        <td>133%</td>
+      </tr>
+      <tr>
+        <td>lg</td>
+        <td>theme.font.lineHeight.lg</td>
+        <td>150%</td>
+      </tr>
+      <tr>
+        <td>xl</td>
+        <td>theme.font.lineHeight.xl</td>
+        <td>170%</td>
+      </tr>
+      <tr>
+        <td>xxl</td>
+        <td>theme.font.lineHeight.xxl</td>
+        <td>200%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-<Typeset
-  fontSizes={[
-    '12px',
-    '14px',
-    '16px',
-    '20px',
-    '24px',
-    '32px',
-    '40px',
-    '48px',
-    '64px'
-  ]}
-  sampleText="Roots Design System"
-/>
+<hr />
 
-#
+# Spacings
+<table>
+  <thead style={{ backgroundColor: '#d4d4d4' }}>
+    <tr>
+      <th>Name</th>
+      <th>Token</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>s0</td>
+      <td>theme.spacing.s0</td>
+      <td>0px</td>
+    </tr>
+    <tr>
+      <td>s2</td>
+      <td>theme.spacing.s2</td>
+      <td>2px</td>
+    </tr>
+    <tr>
+      <td>s4</td>
+      <td>theme.spacing.s4</td>
+      <td>4px</td>
+    </tr>
+    <tr>
+      <td>s8</td>
+      <td>theme.spacing.s8</td>
+      <td>8px</td>
+    </tr>
+    <tr>
+      <td>s12</td>
+      <td>theme.spacing.s12</td>
+      <td>12px</td>
+    </tr>
+    <tr>
+      <td>s16</td>
+      <td>theme.spacing.s16</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <td>s20</td>
+      <td>theme.spacing.s20</td>
+      <td>20px</td>
+    </tr>
+    <tr>
+      <td>s32</td>
+      <td>theme.spacing.s32</td>
+      <td>32px</td>
+    </tr>
+    <tr>
+      <td>s32</td>
+      <td>theme.spacing.s32</td>
+      <td>32px</td>
+    </tr>
+    <tr>
+      <td>s40</td>
+      <td>theme.spacing.s40</td>
+      <td>40px</td>
+    </tr>
+    <tr>
+      <td>s48</td>
+      <td>theme.spacing.s48</td>
+      <td>48px</td>
+    </tr>
+    <tr>
+      <td>s64</td>
+      <td>theme.spacing.s64</td>
+      <td>64px</td>
+    </tr>
+    <tr>
+      <td>s80</td>
+      <td>theme.spacing.s80</td>
+      <td>80px</td>
+    </tr>
+    <tr>
+      <td>s96</td>
+      <td>theme.spacing.s96</td>
+      <td>96px</td>
+    </tr>
+    <tr>
+      <td>s128</td>
+      <td>theme.spacing.s128</td>
+      <td>128px</td>
+    </tr>
+    <tr>
+      <td>s160</td>
+      <td>theme.spacing.s160</td>
+      <td>160px</td>
+    </tr>
+    <tr>
+      <td>s192</td>
+      <td>theme.spacing.s192</td>
+      <td>192px</td>
+    </tr>
+    <tr>
+      <td>s224</td>
+      <td>theme.spacing.s224</td>
+      <td>224px</td>
+    </tr>
+    <tr>
+      <td>s256</td>
+      <td>theme.spacing.s256</td>
+      <td>256px</td>
+    </tr>
+  </tbody>
+</table>
 
-##### Weight
+<hr />
 
-| Variable                    | Value |
-| --------------------------- | ----- |
-| theme.font.weight.hairline  | 100   |
-| theme.font.weight.thin      | 200   |
-| theme.font.weight.light     | 300   |
-| theme.font.weight.normal    | 400   |
-| theme.font.weight.medium    | 500   |
-| theme.font.weight.semibold  | 600   |
-| theme.font.weight.bold      | 700   |
-| theme.font.weight.extrabold | 800   |
-| theme.font.weight.black     | 900   |
+# Layers (z-index)
+<table>
+    <thead style={{ backgroundColor: '#d4d4d4' }}>
+      <tr>
+        <th>Name</th>
+        <th>Token</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>base</td>
+        <td>theme.layers.base</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>menu</td>
+        <td>theme.layers.menu</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>overlay</td>
+        <td>theme.layers.overlay</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>modal</td>
+        <td>theme.layers.modal</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>alwaysOnTop</td>
+        <td>theme.layers.alwaysOnTop</td>
+        <td>50</td>
+      </tr>
+    </tbody> 
+</table>
 
-#
-
-##### Line height
-
-| Variable                       | Value |
-| ------------------------------ | ----- |
-| theme.font.lineHeights.default | 100%  |
-| theme.font.lineHeights.xs      | 115%  |
-| theme.font.lineHeights.sm      | 120%  |
-| theme.font.lineHeights.md      | 133%  |
-| theme.font.lineHeights.lg      | 150%  |
-| theme.font.lineHeights.xl      | 170%  |
-| theme.font.lineHeights.xxl     | 200%  |
-
-## Spacings
-
-| Variable           | Value |
-| ------------------ | ----- |
-| theme.spacing.min  | 4px   |
-| theme.spacing.nano | 8px   |
-| theme.spacing.xxxs | 16px  |
-| theme.spacing.xxs  | 24px  |
-| theme.spacing.xs   | 32px  |
-| theme.spacing.sm   | 40px  |
-| theme.spacing.md   | 48px  |
-| theme.spacing.lg   | 56px  |
-| theme.spacing.xl   | 64px  |
-| theme.spacing.xxl  | 80px  |
-| theme.spacing.xxxl | 120px |
-
-## Layers (z-index)
-
-| Variable                 | Value |
-| ------------------------ | ----- |
-| theme.layers.base        | 10    |
-| theme.layers.menu        | 20    |
-| theme.layers.overlay     | 30    |
-| theme.layers.modal       | 40    |
-| theme.layers.alwaysOnTop | 50    |
 
 ## Border
 

@@ -48,11 +48,11 @@ export const CloseButton = styled(MdClose)`
   ${({ theme }) => css`
     color: ${theme.colors.base.black};
     cursor: pointer;
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.display.xs};
     position: absolute;
     right: ;
-    right: ${theme.spacing.xxs};
-    top: ${theme.spacing.xxs};
+    right: ${theme.spacing.s20};
+    top: ${theme.spacing.s20};
     z-index: ${theme.layers.base};
   `}
 `
@@ -60,11 +60,11 @@ export const CloseButton = styled(MdClose)`
 export const Title = styled.h4`
   ${({ theme }) => css`
     color: ${theme.colors.base.black};
-    font-family: ${theme.font.family.heading};
-    font-size: ${theme.font.sizes.sm};
+    font-family: ${theme.font.family};
+    font-size: ${theme.font.size.xl};
     font-weight: ${theme.font.weight.bold};
-    line-height: ${theme.font.lineHeights.sm};
-    padding: ${theme.spacing.xxs};
+    line-height: ${theme.font.lineHeight.sm};
+    padding: ${theme.spacing.s20};
     width: 100%;
   `}
 `
@@ -77,7 +77,7 @@ export const Content = styled.div`
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: ${theme.spacing.xxs};
+    padding: ${theme.spacing.s20};
     position: relative;
   `}
 `

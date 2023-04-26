@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export default createGlobalStyle`
+export default createGlobalStyle`  
   * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -16,8 +16,8 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: ${({ theme }) => theme.font.family.body};
-    font-size: ${({ theme }) => theme.font.sizes.xs};
+    font-family: ${({ theme }) => theme.font.family};
+    font-size: ${({ theme }) => theme.font.size.md};
     height: 100%;
   }
 `

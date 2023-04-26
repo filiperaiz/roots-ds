@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    padding: 0 ${theme.spacing.sm};
+    padding: 0 ${theme.spacing.s40};
     width: 100%;
   `}
 `
@@ -22,7 +22,7 @@ export const Spinner = styled.div`
     box-sizing: border-box;
     display: inline-block;
     height: 50px;
-    margin-bottom: ${theme.spacing.xxxs};
+    margin-bottom: ${theme.spacing.s16};
     position: relative;
     width: 50px;
 
@@ -54,9 +54,9 @@ export const TextLoader = styled.h2`
   ${({ theme }) => css`
     --text: 'Aguarde';
     color: ${theme.colors.primary[400]};
-    font-size: ${theme.font.sizes.md};
+    font-size: ${theme.font.display.xs};
     height: 36px;
-    margin-bottom: ${theme.spacing.lg};
+    margin-bottom: ${theme.spacing.s48};
     text-align: center;
     width: 100%;
 

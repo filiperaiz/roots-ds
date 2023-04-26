@@ -11,7 +11,7 @@ export const Wrapper = styled.div<WrapperProps>`
     &:not(:last-child) {
       border-bottom: ${theme.border.width.sm} solid ${theme.colors.neutral[100]};
       margin-bottom: ${mb ? theme.spacing[mb] : 0};
-      padding-bottom: ${theme.spacing.xxxs};
+      padding-bottom: ${theme.spacing.s16};
     }
   `}
 `
@@ -22,11 +22,11 @@ export const Title = styled.h4<WrapperProps>`
     color: ${active ? theme.colors.primary[400] : theme.colors.base.black};
     cursor: pointer;
     display: flex;
-    font-size: ${theme.font.sizes.xs};
+    font-size: ${theme.font.size.md};
     font-weight: ${theme.font.weight.bold};
     justify-content: space-between;
-    line-height: ${theme.font.lineHeights.sm};
-    padding-bottom: ${active ? theme.spacing.xxxs : 0};
+    line-height: ${theme.font.lineHeight.sm};
+    padding-bottom: ${active ? theme.spacing.s16 : 0};
 
     &:hover,
     &:focus {
@@ -56,6 +56,6 @@ export const Content = styled.div<WrapperProps>`
   ${({ theme, active }) => css`
     background-color: ${theme.colors.base.white};
     display: ${active ? 'block' : 'none'};
-    font-size: ${theme.font.sizes.sm};
+    font-size: ${theme.font.size.xl};
   `}
 `

@@ -4,18 +4,23 @@ import React, { InputHTMLAttributes, useEffect, useState } from 'react'
 import * as S from './styles'
 
 type SpacingProps =
-  | ''
-  | 'min'
-  | 'nano'
-  | 'xxxs'
-  | 'xxs'
-  | 'xs'
-  | 'sm'
-  | 'md'
-  | 'lg'
-  | 'xl'
-  | 'xxl'
-  | 'xxl'
+  | 's0'
+  | 's2'
+  | 's8'
+  | 's12'
+  | 's16'
+  | 's20'
+  | 's32'
+  | 's40'
+  | 's48'
+  | 's64'
+  | 's80'
+  | 's96'
+  | 's128'
+  | 's160'
+  | 's192'
+  | 's224'
+  | 's256'
 
 export type CheckboxProps = {
   id: string
@@ -35,8 +40,8 @@ const Checkbox = ({
   isChecked = false,
   disabled = false,
   error = false,
-  mb = '',
-  mt = '',
+  mt = 's0',
+  mb = 's0',
   ...props
 }: CheckboxProps) => {
   const [checked, setChecked] = useState(isChecked)
