@@ -3,33 +3,33 @@ import styled, { css, DefaultTheme } from 'styled-components'
 import { CheckboxProps } from '.'
 
 const wrapperModifiers = {
-  error: (theme: DefaultTheme) => css`
+  danger: (theme: DefaultTheme) => css`
     ${Input} {
-      background-color: ${theme.colors.white};
-      border-color: ${theme.colors.error[400]};
+      background-color: ${theme.colors.base.white};
+      border-color: ${theme.colors.danger[400]};
 
       &:before {
         opacity: 0;
       }
     }
     ${Label} {
-      color: ${theme.colors.error[400]};
+      color: ${theme.colors.danger[400]};
     }
   `,
   disabled: (theme: DefaultTheme) => css`
     ${Input} {
-      background-color: ${theme.colors.light[100]};
-      border-color: ${theme.colors.light[700]};
-      color: ${theme.colors.white};
+      background-color: ${theme.colors.neutral[100]};
+      border-color: ${theme.colors.neutral[600]};
+      color: ${theme.colors.base.white};
       cursor: not-allowed;
 
       &:before {
-        border-color: ${theme.colors.light[700]};
+        border-color: ${theme.colors.neutral[600]};
       }
     }
 
     ${Label} {
-      color: ${theme.colors.light[700]};
+      color: ${theme.colors.neutral[600]};
       cursor: not-allowed;
     }
   `
@@ -50,7 +50,7 @@ export const Input = styled.input`
     width: 24px;
 
     &:before {
-      border: 3px solid ${theme.colors.white};
+      border: 3px solid ${theme.colors.base.white};
       border-left: 0;
       border-top: 0;
       content: '';
@@ -64,7 +64,7 @@ export const Input = styled.input`
     }
 
     &:hover {
-      border-color: ${theme.colors.primary[700]};
+      border-color: ${theme.colors.primary[600]};
       transition: ${theme.transition.fast};
     }
 
@@ -81,7 +81,7 @@ export const Input = styled.input`
 
 export const Label = styled.label`
   ${({ theme }) => css`
-    color: ${theme.colors.black};
+    color: ${theme.colors.base.black};
     cursor: pointer;
     flex: 1;
     font-size: ${theme.font.sizes.xs};
@@ -99,6 +99,6 @@ export const Wrapper = styled.div<WrapperProps>`
     margin-top: ${mt ? theme.spacing[mt] : 0};
 
     ${disabled && wrapperModifiers.disabled(theme)}
-    ${error && wrapperModifiers.error(theme)}
+    ${error && wrapperModifiers.danger(theme)}
   `}
 `

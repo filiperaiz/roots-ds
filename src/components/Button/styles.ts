@@ -60,9 +60,9 @@ const wrapperModifiers = {
   `,
   disabled: (theme: DefaultTheme) => css`
     &:disabled {
-      background-color: ${theme.colors.light[700]};
-      border-color: ${theme.colors.light[700]};
-      color: ${theme.colors.white};
+      background-color: ${theme.colors.neutral[600]};
+      border-color: ${theme.colors.neutral[600]};
+      color: ${theme.colors.base.white};
       cursor: not-allowed;
     }
   `
@@ -71,16 +71,16 @@ const wrapperModifiers = {
 const variantModifiers = {
   primary: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.primary[400]};
-    color: ${theme.colors.white};
+    color: ${theme.colors.base.white};
 
     &:hover,
     &:focus,
     &:active {
-      background-color: ${theme.colors.primary[700]};
+      background-color: ${theme.colors.primary[600]};
     }
   `,
   'primary-outline': (theme: DefaultTheme) => css`
-    background: ${theme.colors.white};
+    background: ${theme.colors.base.white};
     border-color: ${theme.colors.primary[400]};
     color: ${theme.colors.primary[400]};
 
@@ -88,8 +88,8 @@ const variantModifiers = {
     &:focus,
     &:active {
       background: ${theme.colors.primary[100]};
-      border-color: ${theme.colors.primary[700]};
-      color: ${theme.colors.primary[700]};
+      border-color: ${theme.colors.primary[600]};
+      color: ${theme.colors.primary[600]};
     }
   `,
   'primary-link': (theme: DefaultTheme) => css`
@@ -100,81 +100,37 @@ const variantModifiers = {
     &:hover,
     &:focus,
     &:active {
-      color: ${theme.colors.primary[700]};
+      color: ${theme.colors.primary[600]};
     }
   `,
-  secondary: (theme: DefaultTheme) => css`
-    background-color: ${theme.colors.secondary[400]};
-    color: ${theme.colors.white};
+  danger: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.danger[400]};
+    color: ${theme.colors.base.white};
 
     &:hover,
     &:focus,
     &:active {
-      background-color: ${theme.colors.secondary[700]};
-    }
-  `,
-  'secondary-outline': (theme: DefaultTheme) => css`
-    background: ${theme.colors.white};
-    border-color: ${theme.colors.secondary[400]};
-    color: ${theme.colors.secondary[400]};
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: ${theme.colors.secondary[100]};
-      border-color: ${theme.colors.secondary[700]};
-      color: ${theme.colors.secondary[700]};
-    }
-  `,
-  'secondary-link': (theme: DefaultTheme) => css`
-    background: transparent;
-    border: none;
-    color: ${theme.colors.secondary[400]};
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: ${theme.colors.secondary[700]};
-    }
-  `,
-  info: (theme: DefaultTheme) => css`
-    background-color: ${theme.colors.info[400]};
-    color: ${theme.colors.white};
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: ${theme.colors.info[700]};
-    }
-  `,
-  error: (theme: DefaultTheme) => css`
-    background-color: ${theme.colors.error[400]};
-    color: ${theme.colors.white};
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: ${theme.colors.error[700]};
+      background-color: ${theme.colors.danger[600]};
     }
   `,
   warning: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.warning[400]};
-    color: ${theme.colors.white};
+    color: ${theme.colors.base.white};
 
     &:hover,
     &:focus,
     &:active {
-      background-color: ${theme.colors.warning[700]};
+      background-color: ${theme.colors.warning[600]};
     }
   `,
   success: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.success[400]};
-    color: ${theme.colors.white};
+    color: ${theme.colors.base.white};
 
     &:hover,
     &:focus,
     &:active {
-      background-color: ${theme.colors.success[700]};
+      background-color: ${theme.colors.success[600]};
     }
   `
 }

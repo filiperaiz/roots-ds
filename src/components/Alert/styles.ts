@@ -6,7 +6,7 @@ export type WrapperProps = Pick<AlertProps, 'variant' | 'mb' | 'mt'>
 
 const wrapperModifiers = {
   info: (theme: DefaultTheme) => css`
-    background-color: ${theme.colors.info[400]};
+    background-color: ${theme.colors.primary[400]};
   `,
   warning: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.warning[400]};
@@ -14,8 +14,8 @@ const wrapperModifiers = {
   success: (theme: DefaultTheme) => css`
     background-color: ${theme.colors.success[400]};
   `,
-  error: (theme: DefaultTheme) => css`
-    background-color: ${theme.colors.error[400]};
+  danger: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.danger[400]};
   `
 }
 
@@ -35,7 +35,7 @@ export const Wrapper = styled.div<WrapperProps>`
     ${!!variant && wrapperModifiers[variant](theme)};
 
     .icon {
-      color: ${theme.colors.white};
+      color: ${theme.colors.base.white};
       font-size: ${theme.font.sizes.md};
       position: absolute;
       top: 50%;
@@ -55,7 +55,7 @@ export const Wrapper = styled.div<WrapperProps>`
 
 export const Text = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
+    color: ${theme.colors.base.white};
     font-family: ${theme.font.family.body};
     font-size: ${theme.font.sizes.xs};
     font-weight: ${theme.font.weight.bold};

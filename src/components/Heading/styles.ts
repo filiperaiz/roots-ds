@@ -27,7 +27,7 @@ type WrapperProps = Omit<HeadingProps, 'children'>
 
 export const Wrapper = styled.h1<WrapperProps>`
   ${({ theme, tag, color, align, mt, mb }) => css`
-    color: ${color ? color : theme.colors.black};
+    color: ${color ? color : theme.colors.base.black};
     font-family: ${theme.font.family.heading};
     font-weight: ${theme.font.weight.bold};
     line-height: ${theme.font.lineHeights.md};

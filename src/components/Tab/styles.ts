@@ -17,14 +17,14 @@ type WrapperProps = {
 export const Wrapper = styled.li<WrapperProps>`
   ${({ theme, active }) => css`
     border-bottom: ${theme.border.width.lg} solid
-      ${active ? theme.colors.primary[400] : theme.colors.light[100]};
+      ${active ? theme.colors.primary[400] : theme.colors.neutral[100]};
     cursor: pointer;
     flex-grow: 1;
     padding: ${theme.spacing.nano};
     text-align: center;
 
     h5 {
-      color: ${theme.colors.secondary};
+      color: ${theme.colors.base.black};
       font-family: ${theme.font.family.heading};
       font-size: ${theme.font.sizes.xs};
       font-weight: ${theme.font.weight.bold};
@@ -32,7 +32,7 @@ export const Wrapper = styled.li<WrapperProps>`
     }
 
     &:hover {
-      background-color: ${theme.colors.light[100]};
+      background-color: ${theme.colors.neutral[100]};
       transition: ${theme.transition.fast};
     }
   `}

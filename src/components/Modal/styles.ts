@@ -17,7 +17,7 @@ export const Overlay = styled.div`
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.base.white};
     border-radius: ${theme.border.radius.sm};
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ export const Wrapper = styled.div`
 
 export const CloseButton = styled(MdClose)`
   ${({ theme }) => css`
-    color: ${theme.colors.black};
+    color: ${theme.colors.base.black};
     cursor: pointer;
     font-size: ${theme.font.sizes.md};
     position: absolute;
@@ -59,7 +59,7 @@ export const CloseButton = styled(MdClose)`
 
 export const Title = styled.h4`
   ${({ theme }) => css`
-    color: ${theme.colors.black};
+    color: ${theme.colors.base.black};
     font-family: ${theme.font.family.heading};
     font-size: ${theme.font.sizes.sm};
     font-weight: ${theme.font.weight.bold};

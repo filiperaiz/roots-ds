@@ -20,7 +20,7 @@ type SpacingProps =
 
 export type AlertProps = {
   children: React.ReactNode
-  variant?: 'info' | 'warning' | 'success' | 'error'
+  variant?: 'info' | 'warning' | 'success' | 'danger'
   mt?: SpacingProps
   mb?: SpacingProps
   close?: boolean

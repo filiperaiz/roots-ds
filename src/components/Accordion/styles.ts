@@ -9,7 +9,7 @@ export const Wrapper = styled.div<WrapperProps>`
     margin-top: ${mt ? theme.spacing[mt] : 0};
 
     &:not(:last-child) {
-      border-bottom: ${theme.border.width.sm} solid ${theme.colors.light[100]};
+      border-bottom: ${theme.border.width.sm} solid ${theme.colors.neutral[100]};
       margin-bottom: ${mb ? theme.spacing[mb] : 0};
       padding-bottom: ${theme.spacing.xxxs};
     }
@@ -19,7 +19,7 @@ export const Wrapper = styled.div<WrapperProps>`
 export const Title = styled.h4<WrapperProps>`
   ${({ theme, active }) => css`
     align-items: center;
-    color: ${active ? theme.colors.primary[400] : theme.colors.black};
+    color: ${active ? theme.colors.primary[400] : theme.colors.base.black};
     cursor: pointer;
     display: flex;
     font-size: ${theme.font.sizes.xs};
@@ -39,7 +39,9 @@ export const Title = styled.h4<WrapperProps>`
 
     &:after {
       border: ${theme.border.width.md} solid;
-      border-color: ${active ? theme.colors.primary[400] : theme.colors.black};
+      border-color: ${active
+        ? theme.colors.primary[400]
+        : theme.colors.base.black};
       border-left: 0;
       border-top: 0;
       content: '';
@@ -52,7 +54,7 @@ export const Title = styled.h4<WrapperProps>`
 
 export const Content = styled.div<WrapperProps>`
   ${({ theme, active }) => css`
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.base.white};
     display: ${active ? 'block' : 'none'};
     font-size: ${theme.font.sizes.sm};
   `}

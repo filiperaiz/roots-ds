@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     align-content: center;
     align-items: center;
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.base.white};
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 export const Spinner = styled.div`
   ${({ theme }) => css`
     animation: rotation 1s linear infinite;
-    border: ${theme.border.width.lg} solid ${theme.colors.light[400]};
+    border: ${theme.border.width.lg} solid ${theme.colors.neutral[400]};
     border-radius: 50%;
     box-sizing: border-box;
     display: inline-block;
