@@ -40,6 +40,7 @@ export type ButtonProps = {
   icon?: JSX.Element
   iconPosition?: 'left' | 'right'
   fullWidth?: boolean
+  onlyIcon?: boolean
   as?: React.ElementType
 } & ButtonTypes
 
@@ -47,12 +48,13 @@ const Button = ({
   children,
   size = 'md',
   variant = 'primary',
-  radius = 'sm',
+  radius = 'round',
   mt = 's0',
   mb = 's16',
   icon,
   iconPosition = 'left',
   fullWidth,
+  onlyIcon,
   ...props
 }: ButtonProps) => (
   <S.Wrapper
@@ -63,6 +65,7 @@ const Button = ({
     radius={radius}
     iconPosition={iconPosition}
     fullWidth={fullWidth}
+    onlyIcon={onlyIcon}
     {...props}
   >
     {icon}

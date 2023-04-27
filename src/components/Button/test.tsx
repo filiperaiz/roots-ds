@@ -9,7 +9,7 @@ describe('<Button />', () => {
     render(<Button>Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
-      height: '48px',
+      height: '44px',
       'font-size': '16px'
     })
   })
@@ -18,7 +18,7 @@ describe('<Button />', () => {
     render(<Button size="sm">Buy now</Button>)
 
     expect(screen.getByRole('button', { name: /Buy now/i })).toHaveStyle({
-      height: '25px',
+      height: '32px',
       'font-size': '14px'
     })
   })

@@ -9,6 +9,11 @@ const wrapperModifiers = {
   danger: (theme: DefaultTheme) => css`
     ${InputWrapper} {
       border-color: ${theme.colors.danger[400]};
+
+      &:focus-within {
+        border-color: ${theme.colors.danger[400]};
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #fecdca;
+      }
     }
 
     ${Label},
@@ -19,14 +24,14 @@ const wrapperModifiers = {
   `,
   disabled: (theme: DefaultTheme) => css`
     ${InputWrapper} {
-      background-color: ${theme.colors.neutral[100]};
-      border-color: ${theme.colors.neutral[600]};
+      background-color: ${theme.colors.neutral[200]};
+      border-color: ${theme.colors.neutral[300]};
     }
 
     ${Label},
     ${InputText},
     ${InputCurrency} {
-      color: ${theme.colors.neutral[600]};
+      color: ${theme.colors.neutral[300]};
       cursor: not-allowed;
     }
   `
@@ -53,7 +58,7 @@ type InputWrapperProps = Pick<InputProps, 'capitalize'>
 export const InputWrapper = styled.div<InputWrapperProps>`
   ${({ theme, capitalize }) => css`
     background-color: ${theme.colors.base.white};
-    border: ${theme.border.width.md} solid ${theme.colors.neutral[600]};
+    border: ${theme.border.width.md} solid ${theme.colors.neutral[300]};
     border-radius: ${theme.border.radius.sm};
     display: flex;
     flex-direction: column;
@@ -63,6 +68,7 @@ export const InputWrapper = styled.div<InputWrapperProps>`
 
     &:focus-within {
       border-color: ${theme.colors.primary[400]};
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #a7e0ff;
     }
 
     ${InputText},
@@ -91,7 +97,7 @@ export const Label = styled.label`
     color: ${theme.colors.base.black};
     display: block;
     font-family: ${theme.font.family};
-    font-size: ${theme.font.size.md};
+    font-size: ${theme.font.size.sm};
     font-weight: ${theme.font.weight.bold};
     line-height: ${theme.font.lineHeight.sm};
     margin-bottom: ${theme.spacing.s4};
@@ -101,15 +107,15 @@ export const Label = styled.label`
 export const Error = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.danger[400]};
-    font-size: ${theme.font.size.sm};
-    margin-top: ${theme.spacing.s4};
+    font-size: ${theme.font.size.xs};
+    margin-top: ${theme.spacing.s8};
   `}
 `
 
 export const ShowPassword = styled.div`
   ${({ theme }) => css`
     align-items: center;
-    color: ${theme.colors.neutral[600]};
+    color: ${theme.colors.neutral[400]};
     cursor: pointer;
     display: flex;
     font-size: ${theme.font.display.xs};

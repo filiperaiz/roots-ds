@@ -38,37 +38,34 @@ export const Input = styled.input`
   ${({ theme }) => css`
     align-items: center;
     appearance: none;
-    border: ${theme.border.width.md} solid ${theme.colors.primary[400]};
+    border: ${theme.border.width.md} solid ${theme.colors.neutral[400]};
     border-radius: ${theme.border.radius.circle};
     cursor: pointer;
     display: flex;
-    height: 24px;
+    height: 20px;
     justify-content: center;
     outline: none;
     position: relative;
-    width: 24px;
+    width: 20px;
 
     &:before {
-      border: 3px solid ${theme.colors.base.white};
-      border-left: 0;
-      border-top: 0;
       content: '';
-      height: 8px;
+      border-radius: ${theme.border.radius.circle};
+      height: 10px;
       opacity: 0;
       position: absolute;
+      background: ${theme.colors.primary[400]};
       top: 3px;
-      transform: rotate(45deg);
-      transition: ${theme.transition.fast};
-      width: 5px;
+      width: 10px;
     }
 
     &:hover {
-      border-color: ${theme.colors.primary[600]};
+      border-color: ${theme.colors.primary[400]};
       transition: ${theme.transition.fast};
     }
 
     &:checked {
-      background: ${theme.colors.primary[400]};
+      background: ${theme.colors.base.white};
       border-color: ${theme.colors.primary[400]};
 
       &:before {
@@ -83,9 +80,9 @@ export const Label = styled.label`
     color: ${theme.colors.base.black};
     cursor: pointer;
     flex: 1;
-    font-size: ${theme.font.size.md};
+    font-size: ${theme.font.size.sm};
     line-height: ${theme.font.lineHeight.md};
-    padding-left: ${theme.spacing.s16};
+    padding-left: ${theme.spacing.s12};
   `}
 `
 type WrapperProps = Pick<RadioProps, 'disabled' | 'error' | 'mt' | 'mb'>

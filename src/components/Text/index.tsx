@@ -37,7 +37,7 @@ const Text = ({
   tag = 'p',
   color,
   align = 'start',
-  size = 'xs',
+  size = 'md',
   mt = 's0',
   mb = 's0',
   bold,

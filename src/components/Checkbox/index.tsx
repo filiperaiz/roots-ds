@@ -26,6 +26,7 @@ export type CheckboxProps = {
   id: string
   value?: string | ReadonlyArray<string> | number
   isChecked?: boolean
+  isIndeterminate?: boolean
   disabled?: boolean
   error?: boolean
   mt?: SpacingProps
@@ -39,6 +40,7 @@ const Checkbox = ({
   children = '',
   isChecked = false,
   disabled = false,
+  isIndeterminate = false,
   error = false,
   mt = 's0',
   mb = 's0',
@@ -65,6 +67,7 @@ const Checkbox = ({
       error={error}
       mb={mb}
       mt={mt}
+      isIndeterminate={isIndeterminate}
     >
       <S.Input
         onClick={handleToggleCheck}

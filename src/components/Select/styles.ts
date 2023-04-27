@@ -10,6 +10,11 @@ const wrapperModifiers = {
       &:after {
         border-color: ${theme.colors.danger[400]};
       }
+
+      &:focus-within {
+        border-color: ${theme.colors.danger[400]};
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #fecdca;
+      }
     }
 
     ${Label},
@@ -19,14 +24,14 @@ const wrapperModifiers = {
   `,
   disabled: (theme: DefaultTheme) => css`
     ${SelectWrapper} {
-      background-color: ${theme.colors.neutral[100]};
-      border-color: ${theme.colors.neutral[600]};
+      background-color: ${theme.colors.neutral[200]};
+      border-color: ${theme.colors.neutral[300]};
     }
 
     ${Label},
     ${SelectWrapper},
     ${Select} {
-      color: ${theme.colors.neutral[600]};
+      color: ${theme.colors.neutral[300]};
       cursor: not-allowed;
     }
   `
@@ -51,7 +56,7 @@ export const Wrapper = styled.div<WrapperProps>`
 export const SelectWrapper = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.base.white};
-    border: ${theme.border.width.md} solid ${theme.colors.neutral[600]};
+    border: ${theme.border.width.md} solid ${theme.colors.neutral[300]};
     border-radius: ${theme.border.radius.sm};
     display: flex;
     flex-direction: column;
@@ -60,10 +65,11 @@ export const SelectWrapper = styled.div`
 
     &:focus-within {
       border-color: ${theme.colors.primary[400]};
+      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #a7e0ff;
     }
 
     &:after {
-      border: ${theme.border.width.md} solid ${theme.colors.neutral[600]};
+      border: ${theme.border.width.md} solid ${theme.colors.neutral[400]};
       border-left: 0;
       border-top: 0;
       content: '';
@@ -107,7 +113,7 @@ export const Label = styled.label`
     color: ${theme.colors.base.black};
     display: block;
     font-family: ${theme.font.family};
-    font-size: ${theme.font.size.md};
+    font-size: ${theme.font.size.sm};
     font-weight: ${theme.font.weight.bold};
     line-height: ${theme.font.lineHeight.sm};
     margin-bottom: ${theme.spacing.s4};
@@ -117,7 +123,7 @@ export const Label = styled.label`
 export const Error = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.danger[400]};
-    font-size: ${theme.font.size.sm};
-    margin-top: ${theme.spacing.s4};
+    font-size: ${theme.font.size.xs};
+    margin-top: ${theme.spacing.s8};
   `}
 `
